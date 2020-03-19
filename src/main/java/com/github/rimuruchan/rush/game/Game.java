@@ -1,21 +1,27 @@
 package com.github.rimuruchan.rush.game;
 
-import org.bukkit.entity.Player;
-
 public class Game {
 
-    Player blue;
-    Player red;
-    GameMap map;
+    public Data blue, red;
+    public GameMap map;
 
-    public Game(Player blue, Player red, GameMap map) {
+    public Game(Data blue, Data red, GameMap map) {
         this.blue = blue;
         this.red = red;
         this.map = map;
     }
 
+    public void prepareStart(Data data) {
+        data.player.teleport(map.blueSpawn);
+        data.giveItems();
+        data.game = this;
+
+    }
+
     public void start() {
-        
+        prepareStart(blue);
+        prepareStart(red);
+
     }
     
     public void stop() {
