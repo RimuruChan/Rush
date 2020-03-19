@@ -1,0 +1,4 @@
+name: Rush
+version: ${project.version}
+main: com.github.sprite233.rush.Rush
+authors: [Sprite233]
