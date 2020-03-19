@@ -1,4 +1,4 @@
 name: Rush
-version: ${project.version}
+version: 1.0-SNAPSHOT
 main: com.github.rimuruchan.rush.Rush
 authors: [Sprite233]
